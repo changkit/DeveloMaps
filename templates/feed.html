@@ -1,0 +1,30 @@
+<!-- Org, proj, tags, and logo -->
+<div id="proj_header">
+  <div id="names">
+    <strong><div id="org_name">{{org_name}}</div></strong>
+    <div id="proj_name">{{proj_name}}</div>
+    <div id="proj_tags"><strong>Tags:</strong><br/>{{tags}}</div>
+  </div>
+  <div id="proj_logo">
+    <img id="proj_img" src="/image?img_id={{img_id}}&img_type=logo"/>
+  </div>
+</div>
+<!-- Other information -->
+<div id="org_info">
+  <strong>Project Description</strong>
+  <div id="description">{{description}}</div><br/>
+
+
+  <div id="other_projects">
+    <strong>Related Projects</strong><br/>
+    {% for proj in proj_list %}
+    <p>{{proj}}</p>
+    {% endfor %}
+  </div><br/>
+  <div id="contact_info">
+    {{contact_info}}
+    <p id="proj_site">{{website}}</p>
+    <p id="proj_phone">{{phone}}</p>
+    <p id="proj_email">{{email}}</p>
+  </div>
+</div>

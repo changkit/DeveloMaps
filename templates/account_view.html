@@ -1,0 +1,91 @@
+<head>
+  <script type="text/javascript" src="/scripts/js/fillOrg.js"></script>
+</head>
+
+<div id="orgs">
+  <h3>Hi, {{user}}.<br/><br/>You are an administrator for the following groups:</h3>
+
+  {% for org in orgs %}
+  <hr/>
+  <div class="org_view_org" >
+    <div id="org_col1">
+      <strong>{{org.name}}</strong><br/>
+      {{org.description}}<br/>
+      {% if org.tags.count %}
+        {{org.tags}}<br/>
+      {% endif %}
+      
+      <br/><i>Group Admins:</i>
+      {% for admin in org.admins %}
+        <br/><font style="padding-left:40px">{{admin.email}}</font>
+      {% endfor %}<br/>
+      
+      
+      {% if org.email or org.address or org.phone or org.website %}
+        <br/><i>Contact Information:</i><br/>
+        {{org.website}}<br/>
+        {{org.email}}<br/>
+        {{org.phone}}<br/>
+        {{org.address}}<br/>
+      {% else %}
+        No Contact Information Provided.<br/>
+      {% endif %}
+      <br/>
+      <form action="/update_org"
+	    onsubmit="updateOrg({{org.key.id}})"
+	    id="update_org_form">
+	<input type="hidden"
+	       id="org_id"
+	       name="org_id"/>
+	<button style="font-size:large">Update Organization</button>
+      </form>
+    </div><!-- end col 1 -->
+
+    <div id="org_col2">
+      <strong>{{org.name}}'s Projects:</strong><br/>
+      {% for proj in org.projects %}
+        <form action="/update_proj">
+	  <input type="hidden" name="proj_id" value="{{proj.key.id}}"/>
+          <p>
+	    <strong>{{proj.title}}</strong>
+	    <button style="float:right;font-size:medium">Update Project</button><br/>
+	    {{proj.description}}<br/>
+	    <b>Tags:</b>
+	    {% for tag in proj.tags %}
+	      {% ifequal tag proj.tags.0 %}
+	        {{tag}}{% else %}
+	        , {{tag}}
+	      {% endifequal %}
+	    {% endfor %}
+	  </p>
+	</form>
+      {% endfor %}
+
+      <form name="new_proj" action="/add_proj" onSubmit="setOrg({{org.key.id}})">
+	<!--  Send along org id with this submission so we know which 
+	      Org this project will belong to. But we need to make the
+	      id of this button the org id, because there will be one of 
+	      these for each org, and we need to uniquely identify them.
+	-->
+	<input type="hidden" id="{{org.key.id}}" name="id">
+	<button style="font-size:large">Add Project</button><br/>
+      </form>
+    </div>
+
+    <div id="org_col3">
+      <strong>Logo</strong><br/>
+      <img id="proj_img" 
+	   style="height=60em;"
+	   src="/image?img_id={{org.key.id}}&img_type=logo"/>
+    </div>
+
+  </div>
+  {% endfor %}
+
+</div>
+<hr/>
+<div style="clear:both">
+  <form action="/register">
+    <button id="add_org" action>Add Organization</button>
+  </form>
+</div>

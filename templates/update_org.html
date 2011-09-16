@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/scripts/js/config.js"></script>
+    <script type="text/javascript" src="/scripts/js/submit.js"></script>
+  </head>
+
+  <body onload="initialize()">
+    {{header}}
+
+    <div>
+      <h1><br/>Put your organization on the map.</h1><br/>
+    </div>
+
+    <div id="upload">
+
+      <form name="upload"
+	    action="/update_org_store"
+	    enctype="multipart/form-data"
+	    method="post">
+
+	<!-- Columns of input forms -->
+	<div id="inputs">
+
+	  <!-- Column 1 -->
+	  <div id="col1">
+	    
+	    <input type="hidden"
+		   id="org_id"
+		   name="org_id"/>
+
+	    Organization Name: <br/>
+	    <input type="text"
+		   name="org_name"
+		   class="user_input"
+		   id="org_name"
+		   value="{{org.name}}"/><br/>
+
+	    Address: <br/>
+	    <input type="text"
+		   id="address"
+		   name="addr"
+		   class="user_input"
+		   value="{{org.address}}"/><br/>
+
+	    <input type="button" value="Find on Map"
+		   onclick="codeAddress()"/><br/><br/>
+
+	    Description (< 200 words): <br/>
+	    <div><textarea name="content"
+			   class="user_input"
+			   rows="18" cols="40">{{org.description}}</textarea></div><br/>
+
+	    <!-- Internally, need to store lat and lng -->
+	    <input type="hidden" name="lat"/>
+	    <input type="hidden" name="lng"/>
+
+	    <p>You can submit an organization logo, and up to 
+	       two pictures.</p>
+
+	    Logo: <br/>
+	    <input type="file"
+		   name="logo"/><br/>
+	    First Image: <br/> 
+	    <input type="file"
+		   name="img1"/><br/>
+	    Second Image: <br/>
+	    <input type="file"
+		   name="img2"/><br/>
+
+	  </div>
+	  
+	  <!-- Column 2 -->
+	  <div id="col2">
+	    
+	    <!--<body onload="initialize()"> 
+	      <div id="map_preview"></div> 
+	    </body> -->
+	    Your Organization's Location:<br/>
+	    <div id="map_preview"></div><br/>
+
+	    <p>How can interested users contact your organization?</p>
+	    
+	    Website: <br/>
+	    <input type="text"
+		   id="website"
+		   class="user_input"
+		   name="site"
+		   value="{{org.website}}"/><br/>
+	    Phone Number: <br/>
+	    <input type="text"
+		   id="phone"
+		   class="user_input"
+		   name="phone"
+		   value="{{org.phone}}"/><br/>
+	    Email Contact: <br/>
+	    <input type="text"
+		   id="email"
+		   class="user_input"
+		   name="email"
+		   value="{{org.email}}"/><br/>
+	  </div>	  
+
+	  <!-- End of Columns -->
+	</div>
+      </form> 
+
+      <hr/>
+      <div style="clear:both">
+	<div style="float:right">
+	  <p>
+	    <!--<button id="org_submit"  onclick="submitOrg()">Submit Updates</button>-->
+	    <button id="org_update"
+		    class="submit"
+		    onclick="updateOrg({{org.key.id}})"
+		    >Submit Updates</button>
+	  </p>
+	</div>
+      </div>
+
+    </div> <!-- End Upload Div -->
+  </body>
+</html>

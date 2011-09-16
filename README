@@ -1,0 +1,86 @@
+This is the project directory for DeveloMaps.
+
+Quick Start:
+--------------------------------------------------
+To start the development server, use the AppEngine
+launcher and click 'Run'. The server will be
+reachable via
+
+http://localhost:8080
+
+Though the port number 8080 might change if you
+have multiple development servers set up.
+
+Alternatively, you can use the scripts provided
+in the AppEngine SDK to start the dev server from
+the terminal:
+
+dev_appserver.py <Application_Root>
+
+e.g.
+
+dev_appserver.py .
+
+To deploy the application to Google's serverss,
+click the 'Deploy' button on the launcher UI, or
+from the terminal,
+
+appcfg.py update <Application_Root>
+
+Code Structure:
+--------------------------------------------------
+Below is a description of the files and
+directories associated with the project.
+
+app.yaml:
+  - AppEngine config file. Best not to mess
+    with this unless you really need to.
+
+backup:
+  - Directory containing (hopefully) timestamped
+    backup images of the DeveloMaps database.
+  - Use the --upload and --download flags with the
+    launcher script to get data to and from the
+    production server.
+
+geo:
+  - This is the geo library developed by Roman
+    Nurik (2009) which allows for basic geospatial
+    queries in AppEgine.
+  - Formerly this was not feasible since the 
+    AppEngine datastore only supports filters on
+    at most one entity property, so we could not
+    filter by geospatial bounding box.
+
+handlers:
+  - This is where the python scripts are located,
+    which define request handlers.
+  - If you want to change what the server does, 
+    this is where you want to look.
+
+images:
+  - Here are some static images that are not 
+    associated with any user data.
+  - e.g. icons, profile pictures, etc.
+
+scripts:
+  - Here is the client side javascript code.
+  - /lib contains the javascript libraries used
+    for this project.
+  - /js contains the javascript code written for
+    this particular project.
+
+text:
+  - static text files
+
+templates:
+  - The .html files are actually templates that
+    will be filled in at run-time using the 
+    Django framework.
+  - For the most part, these just define the
+    structure of the page, and not the visual
+    effects.
+
+stylesheets:
+  - style.css defines the style attributes for
+    the application.

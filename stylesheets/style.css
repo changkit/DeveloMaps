@@ -1,0 +1,581 @@
+
+ul, li.data_feed {
+  margin:0; padding:0; list-style:none;
+}
+
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+
+}
+
+div {
+	
+}
+
+a {
+  text-decoration:none;
+  color:006600; 
+}
+
+hr {
+  width:1100px;
+  float:left;
+  border-width: 2px;
+}
+
+#header {
+  width:1100px;
+}
+
+#logo { 
+  width: 440px;
+  height: 35px;
+  float:left;
+  text-align:left;
+  font-size:xx-large;
+  padding-top:0px;
+  color:black;
+}
+
+#user_id {
+  width:270px;
+  height:20px;
+  float:left;
+  text-align:center;
+  vertical-align:bottom;
+  padding-top:14px;
+  overflow:hidden;
+}
+
+#login {
+  padding-top:0px;
+  width: 150px;
+  height: 30px;
+  float: right;
+  text-align:center;
+  font-size:xx-large;
+  color:green;
+}
+
+#register {
+  padding-top:0px;
+  width: 170px;
+  height:30px;
+  float:right;
+  text-align:center;
+  font-size:xx-large;
+}
+
+#content {
+  border:0px solid grey;
+  font-size:medium;
+  width:73em;
+  height:37em;
+  margin-top:.5em;
+}
+
+#map_col {
+  width: 430px;
+  height: 570px;
+  float: left;
+  font-size:medium;
+}
+
+hr#map {
+  width: 430px;
+}
+
+#query {
+  height:2em;
+  width:100%;
+  border:1px solid grey;
+  font-size:large;
+  color:grey;
+}
+
+#map_canvas {
+  width: 27em;
+  height: 30em;
+  border:1px solid grey;
+  margin-top:.75em;
+}
+
+#feed {
+  font-size:medium;
+  overflow-y: auto;
+  width: 43em;
+  height: 31em;
+  float:right;
+  padding:1em;
+  border:1px solid grey;
+  margin-top:.5em;
+}
+
+#spacer {
+  width:11.5px;
+  height:100px;
+  float:right;
+}
+
+#search {
+  height:2em;
+  width:27em;
+  font-size:medium;  
+  border:0px solid grey;
+}
+
+#filters {
+  width:40%;
+  float:right;
+  height:560px;
+  overflow:auto;
+  z-index:2;
+}
+
+div#proj_header {
+  float:none;
+}
+
+div#names {
+  float:left;
+  width:50%;
+}
+
+div#org_name {
+  float:none;
+}
+
+div#proj_logo {
+  float:right;
+  width:40%;
+}
+
+img#proj_img {
+  height:120px;
+}
+
+div#org_info {
+  clear:both;
+}
+
+div#description {
+  float:none;
+}
+
+#admin {
+
+}
+
+#about {
+  float:left;
+  padding-left:10px;
+}
+
+#feedback {
+  float:right;
+  padding-right:10px;
+}
+
+#upload {
+  width:1100px;
+}
+
+div#col1 {
+  float:left;
+  padding-left:20px;
+  width:550px;
+}
+
+div#col2 {
+  padding-left:50px;
+  width:450px;
+  float:left;
+}
+
+#submit {
+  clear:both;
+}
+
+input#org_name {
+  width:500px;
+}
+
+input#website {
+  width:450px
+}
+
+input#phone {
+  width:450px;
+}
+
+input#email {
+  width:450px;
+}
+
+#map_preview {
+  width:450px;
+  height:400px;
+}
+
+#view-toggle button {
+  font-size:large;
+}
+
+input#nextbutton {
+  font-size:xx-large;
+  float:right;
+  height:3em;
+  width:5em;
+}
+
+button#org_submit {
+  width:20em;
+  font-size:x-large;
+  height:1.5em;
+}
+
+div#pcol1 {
+  width:300px;
+  float:left;
+}
+
+div#pcol2 {
+  width:350px;
+  float:right;
+  padding-right:70px;
+}
+
+div#pcol3 {
+  width:300px;
+  float:right;
+  padding-right:0px;
+}
+
+div#pmap {
+  width:350px;
+  height:400px;
+}
+
+button#add_org {
+  font-size:x-large;
+  float:right;
+}
+
+div.org_view_org {
+  font-size:large;
+  clear:both;
+}
+
+div#org_col1 {
+  width:20em;
+  float:left;
+  padding-right:1em;
+}
+
+div#org_col2 {
+  width:20em;
+  float:right;
+  padding-right:0px;
+}
+
+div#org_col3 {
+  width:17em;
+  padding-right:1em;
+  float:right;
+}
+
+.user_input {
+  font-size:medium;
+}
+
+input.user_input {
+  width:20em;
+}
+
+button.submit {
+  font-size:x-large;
+}
+
+#menu {
+  float:left;
+  width:15em;
+}
+
+#menu ul li {
+  background-color:white;
+  position: relative;
+} 
+
+#menu ul li ul {
+  background-color:white;
+  border:1px solid grey;
+  position: absolute;
+  width:15em;
+  z-index: 500;
+}
+
+#menu ul li.hover {
+  cursor:pointer;
+}
+
+div#menu ul ul {
+  display: none;
+}
+
+div#feed_header {
+  font-size:medium;
+  height:2.3em;
+  width:20em;
+  float:left;
+  margin-left:1em;
+  padding:0em;
+  border:0px solid grey;
+}
+
+#down_arrow {
+  float:right;
+  margin-top:0em;
+}
+
+.data_feed button {
+  vertical-align:middle;
+  padding-top:.5em;
+  background-color:none;
+  height:2.35em;
+  font-size:medium;
+  width:15.15em;
+}
+
+.plink {
+  cursor:pointer;
+  color:003300;
+}
+
+button#restore {
+  font-size:large;
+}
+
+.profile {
+  clear:both;
+  width:900px;
+  height:200px;
+  padding:20px;
+  border-top:1px solid grey;
+}
+
+.profile_pic {
+  float:left;
+  width:20%;
+  border:none;
+}
+
+.bio {
+  width:70%;
+  border:1px solid grey;
+  padding-left:5%;
+  float:left;
+}
+
+.splash {
+  padding-left:1em;
+}
+
+.header {
+  font-size:medium;
+  width:72em;
+  height:2em;
+  border-bottom:1px solid grey;
+  padding:.5em;
+}
+
+.header #logout{
+  font-size:x-large;
+  float:right;
+  margin-left:2em;
+}
+
+.header form a {
+  color:006600;
+  font-size:x-large;
+  float:right;
+  padding-top:.15em;
+}
+
+#signbox {
+  float:right;
+}
+
+div#signin_user {
+  color:grey;
+  float:left;
+}
+
+div#signin_user input {
+  font-size:medium;
+}
+
+div#signin_pass {
+  color:grey;
+  float:left;
+  padding-left:1em;
+}
+
+div#signin_pass input { 
+  font-size:medium;
+}
+
+div#signin_button {
+  float:left;
+}
+
+div#signin_button button {
+  margin-top:1.4em;
+  font-size:medium;
+}
+
+.app_desc {
+  background-color:006600;
+  color:white;
+  width:71em;
+  height:5em;
+  font-size:medium;
+  border:1px solid grey;
+  margin-top:.5em;
+  padding:1em;
+}
+
+button#preview {
+  font-size:x-large;
+}
+
+#mainsplash {
+  font-size:medium;
+  width:71em;
+  height:26em;
+  border:0px solid grey;
+  margin-top:.5em;
+}
+
+#screenshot {
+  float:left;
+  height:23em;
+  width:45em;
+  border:0px solid grey;
+  font-size:medium;
+}
+
+#screenshot_lhs {
+  float:left;
+}
+
+#screenshot_rhs {
+  float:right;
+}
+
+#screenshot ul {
+  font-size:xx-large;
+  width:5em;
+  float:left;
+  border:0px solid grey;
+}
+
+#screenshot img {
+  border:2px solid grey;
+  float:right;
+  margin-top:1em;
+}
+
+#screenshot button {
+  font-size:xx-large;
+}
+
+#mantra {
+  float:left;
+}
+
+#learn_more {
+  clear:both;
+  float:left;
+  margin-top:1em;
+}
+
+#signup {
+  font-size:medium;
+  float:right;
+  width:23em;
+  border-left:1px solid grey;
+  height:21em;
+  padding:1em;
+}
+
+#fed_signin {
+  float:right;
+}
+
+#fed_signin button {
+  font-size:x-large;
+}
+
+#federated {
+    margin-top:2em;
+}
+
+#federated div {
+  float:left;
+  margin-left:1em;
+}
+
+#signuptext {
+  font-size:large;
+  text-align:justify;
+}
+
+div#signup_button {
+  clear:both;
+  float:right;
+}
+
+#signup button {
+  font-size:large;
+}
+
+#signupbox {
+  margin-top:2em;
+  float:right;
+}
+
+#signupbox div input {
+  font-size:large;
+  clear:both;
+  float:right;
+  color:grey;
+}
+
+#signupbox div {
+  font-size:large;
+  float:right;
+}
+
+div.footer {
+  font-size:medium;
+  width:67em;
+  height:3em;
+  border-top:1px solid grey;
+  padding-left:5.5em;
+}
+
+div.footer li {
+  font-size:medium;
+  border-left:1px solid grey;
+  border-right:1px solid grey;
+  float:left;
+  width:10em;
+  padding-left:0em;
+  padding-right:0em;
+  text-align:center;
+}
+
+div#appengine_logo {
+  margin-top:13em;
+  clear:both;
+}

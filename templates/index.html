@@ -1,0 +1,82 @@
+<!-- Title, Stylesheets, Javascript -->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/> 
+  <title>DeveloMaps</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="/scripts/lib/prototype.js"></script>
+  <script type="text/javascript" src="/scripts/js/config.js"></script>
+  <script type="text/javascript" src="/scripts/lib/shortcut.js"></script>
+  <script type="text/javascript" src="/scripts/lib/jquery.js"></script>
+  <script type="text/javascript" src="/scripts/js/projmap.js"></script>
+</head>
+
+<!-- Main page content -->
+<body class="splash"
+      onload="initialize()"
+      onunload="GUnload()">
+
+  {{header}}
+
+  <!-- Page content -->
+  <div id="content">
+
+    <!-- Search and Map Column -->
+    <div id="map_col">
+      <div id="search">
+	<form onsubmit="search(); return false;">
+	  <input id="query" type="text" name="query"
+		 value="Tab to toggle Search..."
+		 onfocus="document.getElementById('query').value = ''"/>
+	</form>
+      </div>
+      <div id="map_canvas"></div><br/>
+
+      <div id="view-toggle"> 
+        <button
+	   style="color:black">&laquo Hide Map</button> 
+      </div> 
+    </div>
+
+    <div id="feed_header">
+      <div id="menu">
+	<ul>
+	  <li class="data_feed">
+	    <button>
+		<b>Filter by Tag</b> [F]
+		<img src="view_image?name=down_arrow"
+		     height="22px"
+		     width="22px"
+		     id="down_arrow"/>
+	    </button>
+	    <ul>
+	      {% for tag in tag_list %}
+	      <input type="checkbox"
+		     name="{{tag}}"
+		     onclick="filter(this)"> {{tag}}</input><br/>
+	      {% endfor %}
+	      
+	    </ul>
+	  </li>
+	</ul>
+      </div><br/><br/>
+    </div><br/>
+
+    <!-- Information Feed -->
+    <div id="feed">
+
+      <div id="feed_content"
+	   style="clear:both;  z-index:1">
+
+	Loading Projects...
+
+	<img src="/view_image?name=loading"/>
+
+      </div>
+    </div>
+  </div>
+  {{footer}}
+
+<br/><br/>
+  
+

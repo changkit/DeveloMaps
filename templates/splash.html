@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css"
+	  href="/stylesheets/style.css"/>
+  </head>
+  <body class="splash">
+
+    {{header}}
+    
+    <div class="app_desc">
+      <font style="font-size:xx-large">DeveloMaps helps volunteers find projects, and helps  service-based organizations connect and collaborate. </font>
+      <button id="preview">Preview</button>
+    </div>
+
+    <div id="mainsplash">
+
+      <div id="screenshot">
+	<div id="screenshot_lhs">
+	  <div id="mantra">
+	    <ul><br/><br/>
+	      <li>Search,</li>
+	      <li>Connect,</li>
+	      <li>Collaborate.</li>
+	    </ul>
+	  </div>
+
+	  <div id="learn_more">
+	    <button>Learn More</button>
+	  </div>
+	</div>
+	  
+	<div id="screenshot_rhs">
+	  <img src="/view_image?name=screenshot"
+	       height="300px"
+	       width="450px"/>
+	</div>
+	
+      </div>
+
+      <div id="signup">
+	<div id="signuptext">
+	  Full accounts on DeveloMaps are free and always will be.
+	  To get yours, register with your Google or OpenID account below:
+	</div>
+
+	<div id="signupbox">
+	  <div id="signup_user">
+	    First Name:<input type="text"/>
+	  </div>
+	  <div id="signup_pass">
+	    Last Name:<input type="text"/>
+	  </div>
+	  <div id="signup_account">
+	    Account ID:<input type="text"
+			      value="e.g. bob@gmail.com"
+			      onclick="value='';"/>
+	  </div>
+	  <div id="signup_button">
+	    <button>Sign Up!</button>
+	  </div>
+	</div>
+	
+	<form style="display:none">
+
+	  <div id="signupbox">
+	    <div id="signup_user">
+	      username<br/><input type="text"/>
+	    </div>
+	    <div id="signup_pass">
+	      password<br/><input type="text"/>
+	    </div>  
+	  </div>
+	  <div id="signup_button">
+	    <button>Sign Up!</button>
+	  </div>
+	</form>
+	
+	<div id="appengine_logo">
+	  <img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif" 
+	       alt="Powered by Google App Engine"
+	       height="10%";/>
+	</div>
+	  
+      </div>
+    </div> <!-- End Main Splash -->
+
+    <div class="footer">
+
+      <ul>
+	<li><a href="/about">About Us</a></li>
+	<li><a href="">Contact</a></li>
+	<li><a href="/feedback">Feedback</a></li>
+	<li><a href="">Sitemap</a></li>
+	<li><a href="">FAQ</a></li>
+	<li><a href="">Blog</a></li>
+      </ul>
+
+    </div>
+  </body>
+</html>
